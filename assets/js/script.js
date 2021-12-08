@@ -7,7 +7,12 @@ const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const choices = ("rock", "paper", "scissors");
+const player = {
+    "rock": "assets/images/rock.jpeg",
+    "paper": "assets/images/paper.jpeg",
+    "scissors": "assets/images/scissors.jpeg"
+}
+const player = ("rock", "paper", "scissors");
 
 /**
  * Add event listener to all buttons
@@ -15,8 +20,8 @@ const choices = ("rock", "paper", "scissors");
 
 for (let button of buttons) {
     button.addEventListener("click", function () {
-        let playerChoice = this.getAttribute("data-choice");
-        playGame(playerChoice);
+        let choice = this.getAttribute("data-choice");
+        playGame(choice);
     });
 }
 
@@ -24,17 +29,29 @@ for (let button of buttons) {
  * Main game function accepts one parameter which 
  * is the data-choice value of the selected button
  */
-function playGame(playerChoice) {
+function playGame(player) {
 
-    playerImage.src = 'assets/images/${choices[playerChoice]}.jpg';
-    playerImage.alt = choices[playerChoice];
+    playerImage.src = 'assets/images/${choice[playerChoice]}.jpeg';
+    playerImage.alt = choices[player];
 
-    let computerChoice = Math.floor(math.random() * 3);
+    let computer = Math.floor(math.random() * 3);
 
-    computerImage.src = 'assets/images/${choices[computerChoice]}.jpg';
-    computerImage.alt = choices[computerChoice];
+    computerImage.src = 'assets/images/${choice[computerChoice]}.jpeg';
+    computerImage.alt = choices[computer];
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    let result = checkWinner(choices[computer], choices[player]);
 
     updateScores(result);
+}
+
+function checkAnswer()
+
+function calculateCorrectAnswer()
+
+function incrementScore()
+
+function incrementWrongAnswer()
+
+    if(player == "rock") {
+document.getElementsByClassName("player").src = "assets/images/rock.jpeg"
 }

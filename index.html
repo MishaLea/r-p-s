@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- font awesome and google fonts added  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- link used as in Love Maths challenge but different font -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
 
@@ -19,56 +21,52 @@
 
 <body>
     <header>
-    <h1 class="heading"> Let's Rock, Paper, Scissors! </h1>
-</header>
+        <h1 class="heading"> Let's Rock, Paper, Scissors! </h1>
+    </header>
 
     <!-- This is the main game area, the class names from the 'project scope' video have been used -->
 
     <!-- The end div for the game-area is placed after the score-area div. 
     I'm hoping this will keep the three areas in one place -->
-<div class="game-area">
+    <div class="game-area">
 
         <h2>Let's play!</h2>
-    
+
         <!-- images copied from google - created by: Mary dela Cruz-->
-        <img src="/assets/images/rock.jpg" alt="rock-image">
-        <img src="/assets/images/paper.jpg" alt="paper-image">
-        <img src="/assets/images/scissors.jpg" alt="scissors-image">
+        <img src="/assets/images/rock.jpeg" alt="rock-image">
+        <img src="/assets/images/paper.jpeg" alt="paper-image">
+        <img src="/assets/images/scissors.jpeg" alt="scissors-image">
 
-    <div class="choice-area">
-        <button aria-label="Rock" data-choice="0" class="choice">Rock</button>
-        <button aria-label="Paper" data-choice="1" class="choice">Paper</button>
-        <button aria-label="Scissors" data-choice="2" class="choice">Scissors</button>
-        
-        
-    
-    </div>
-
-    <div class="play-area">
-       <div class="player"> 
-           <h3 class="scores">Your Score: <span id="player-score">0</span></h3>
-            <img id="player-image" src="assets/images/rps.jpeg" alt="Rock Paper Scissors Image">
+        <div class="choice-area">
+            <button aria-label="Rock" data-choice="0" class="choice">Rock</button>
+            <button aria-label="Paper" data-choice="1" class="choice">Paper</button>
+            <button aria-label="Scissors" data-choice="2" class="choice">Scissors</button>
         </div>
-        
-        <div class="computer"> 
-            <h3 class="scores">Computer Score: <span id="computer-score">0</span></h3>
-             <img id="computer-image" src="assets/images/rps.jpeg" alt="Rock Paper Scissors Image">
-         </div>
 
-    <div class="score-area">
+        <div class="play-area">
+            <div class="player">
+                <h3 class="scores">Your Score: <span id="player-score">0</span></h3>
+                <img id="player-image" src="assets/images/rps.jpeg" alt="Rock Paper Scissors Image">
+            </div>
 
-    </div>
+            <div class="computer">
+                <h3 class="scores">Computer Score: <span id="computer-score">0</span></h3>
+                <img id="computer-image" src="assets/images/rps.jpeg" alt="Rock Paper Scissors Image">
+            </div>
 
-</div>
-    <!-- script used as in Love Maths challenge -->
-    <script src="assets/js/script.js"></script>
+            <div class="score-area"></div>
 
-    <!--Basic footer including Rules-->
-<footer>
-        <h2>How To Play</h2>
-        <p>Rock beats Scissors - Paper beats Rock - Scissors beats Paper</p>
-        <h2>Have Fun!</h2>
+        </div>
+        <!-- script used as in Love Maths challenge -->
+        <script src="assets/js/script.js"></script>
 
-</footer>
+        <!--Basic footer including Rules-->
+        <footer>
+            <h2>How To Play</h2>
+            <p>Rock beats Scissors - Paper beats Rock - Scissors beats Paper</p>
+            <h2>Have Fun!</h2>
+
+        </footer>
 </body>
+
 </html>
