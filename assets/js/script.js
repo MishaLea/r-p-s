@@ -3,8 +3,8 @@
  */
 
 const buttons = document.getElementsByClassName("choice");
-const playerScore = document.getElementById("player-score");
-const computerScore = document.getElementById("computer-score");
+const playerScore = document.getElementById("player");
+const computerScore = document.getElementById("computer");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const player = {
@@ -29,14 +29,17 @@ for (let button of buttons) {
  * Main game function accepts one parameter which 
  * is the data-choice value of the selected button
  */
-function playGame(player) {
 
-    playerImage.src = 'assets/images/${choice[playerChoice]}.jpeg';
+
+function playGame("player") {
+
+    playerImage.src = 'assets/images/${choice[player]}.jpeg';
     playerImage.alt = choices[player];
 
     let computer = Math.floor(math.random() * 3);
 
-    computerImage.src = 'assets/images/${choice[computerChoice]}.jpeg';
+
+    computerImage.src = 'assets/images/${choice[computer]}.jpeg';
     computerImage.alt = choices[computer];
 
     let result = checkWinner(choices[computer], choices[player]);
@@ -44,7 +47,33 @@ function playGame(player) {
     updateScores(result);
 }
 
-function checkAnswer()
+let rock;
+let paper;
+let scissors;
+
+if ("rock > scissors") {
+    rock = true;
+} else if ("scissors > paper") {
+    scissors = true;
+} else if ("paper > rock") {
+    paper = true;
+}
+
+function checkAnswer("choice-area") {
+    let rock;
+    let paper;
+    let scissors;
+
+    if ("rock > scissors") {
+        rock = true;
+    } else if ("scissors > paper") {
+        scissors = true;
+    } else if ("paper > rock") {
+        paper = true;
+    }
+
+}
+
 
 function calculateCorrectAnswer()
 
@@ -52,6 +81,6 @@ function incrementScore()
 
 function incrementWrongAnswer()
 
-    if(player == "rock") {
-document.getElementsByClassName("player").src = "assets/images/rock.jpeg"
+if (player == "rock") {
+    document.getElementsByClassName("player").src = "assets/images/rock.jpeg"
 }
