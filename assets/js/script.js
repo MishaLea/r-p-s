@@ -34,7 +34,7 @@ for (let button of buttons) {
 function playGame("player") {
 
     playerImage.src = 'assets/images/${choice[player]}.jpeg';
-    playerImage.alt = choices[player];
+    playerImage.alt = choices["player"];
 
     let computer = Math.floor(math.random() * 3);
 
@@ -47,17 +47,7 @@ function playGame("player") {
     updateScores(result);
 }
 
-let rock;
-let paper;
-let scissors;
 
-if ("rock > scissors") {
-    rock = true;
-} else if ("scissors > paper") {
-    scissors = true;
-} else if ("paper > rock") {
-    paper = true;
-}
 
 function checkAnswer("choice-area") {
     let rock;
@@ -82,5 +72,6 @@ function incrementScore()
 function incrementWrongAnswer()
 
 if (player == "rock") {
-    document.getElementsByClassName("player").src = "assets/images/rock.jpeg"
+    document.getElementsByClassName("player").src = "assets/images/rock.jpeg");
+
 }
