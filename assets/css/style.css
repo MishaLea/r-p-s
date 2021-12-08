@@ -12,3 +12,55 @@ body {
     margin: 0;
     background-color: #DDA0DD;
 }
+
+/* Header and footer style*/
+
+header {
+    text-align: center;
+    height: 75px;
+    font-size: 25px;
+    /*Trying to create a solid bottom border underneath the heading */
+    border-bottom: black 5px;
+}
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    min-height: 80px;
+    padding-top: 2px;
+    text-align: center;
+    color: black;
+    background-color: #DDA0DD;
+}
+
+footer p {
+    /* need to find the correct rule in order to create a box around the rules*/
+    border-width: 5px;
+    border-style: dotted;
+    border-color: black;
+}
+
+/* Game Area*/
+
+.game-area {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.choice {
+    display: inline-block;
+    margin: 4%;
+    width: 100px;
+    height: 40px;
+}
+
+button:hover {
+    background-color:skyblue;
+}
