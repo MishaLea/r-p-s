@@ -7,12 +7,15 @@ const playerScore = document.getElementById("player");
 const computerScore = document.getElementById("computer");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const player = {
-    "rock": "assets/images/rock.jpeg",
-    "paper": "assets/images/paper.jpeg",
-    "scissors": "assets/images/scissors.jpeg"
-}
-const player = ("rock", "paper", "scissors");
+
+/**Const example from google */
+
+const choice = document.querySelectorAll(".choice");
+
+    choice.forEach((choice) => {
+        choice.addEventListener("click", function () {
+        });
+    });
 
 /**
  * Add event listener to all buttons
