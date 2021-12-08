@@ -52,6 +52,7 @@ footer p {
     margin-right: auto;
     margin-top: 1%;
     text-align: center;
+    height: 80%;
 }
 
 .choice {
@@ -63,4 +64,27 @@ footer p {
 
 button:hover {
     background-color:skyblue;
+}
+
+.player {
+    background-color: #B4A0DD
+    ;
+    float: left;
+    width: 45%;
+}
+
+#player-image {
+    width: 90%;
+    margin-bottom: 40%;
+}
+
+.computer {
+    background-color: #A0DDA0;
+    float: right;
+    width: 45%;
+}
+
+#computer-image {
+    width: 90%;
+    margin-bottom: 40%;
 }
