@@ -3,8 +3,8 @@
  */
 
 const buttons = document.getElementsByClassName("choice");
-const playerScore = document.getElementById("player");
-const computerScore = document.getElementById("computer");
+const player = document.getElementById("player");
+const computer = document.getElementById("computer");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 
@@ -13,68 +13,53 @@ const computerImage = document.getElementById("computer-image");
 const choice = document.querySelectorAll(".choice");
 
     choice.forEach((choice) => {
-        choice.addEventListener("click", function () {
-        });
+    
+    choice.addEventListener("click", function () {
+        
+/** variable 'input' created for click event */
+    const player = this.textContent;
+
+    const cChoice = ["Rock", "Paper", "Scissors"];
+    const computer = cChoice[Math.floor(Math.random() * 3)];
+
+    compareInputs(player, computer);
     });
-
-/**
- * Add event listener to all buttons
- */
-
-for (let button of buttons) {
-    button.addEventListener("click", function () {
-        let choice = this.getAttribute("data-choice");
-        playGame(choice);
-    });
-}
-
-/**
- * Main game function accepts one parameter which 
- * is the data-choice value of the selected button
- */
-
-
-function playGame("player") {
-
-    playerImage.src = 'assets/images/${choice[player]}.jpeg';
-    playerImage.alt = choices["player"];
-
-    let computer = Math.floor(math.random() * 3);
-
-
-    computerImage.src = 'assets/images/${choice[computer]}.jpeg';
-    computerImage.alt = choices[computer];
-
-    let result = checkWinner(choices[computer], choices[player]);
-
-    updateScores(result);
-}
+});
 
 
 
-function checkAnswer("choice-area") {
-    let rock;
-    let paper;
-    let scissors;
+function compareInputs(player, computer) {
+    const currentMatch = `${player} vs ${computer}`;
 
-    if ("rock > scissors") {
-        rock = true;
-    } else if ("scissors > paper") {
-        scissors = true;
-    } else if ("paper > rock") {
-        paper = true;
+//**Tie */
+    if (player === computer) {
+        alert(`${currentMatch} is a Tie`);
+        return;
+    }
+//** Rock */
+    if (player === "Rock") {
+        if (computer === "Scissors") {
+            alert(`${currentMatch} = You Win`);
+        } else {
+            alert(`${currentMatch} = Computer Wins`);
+        }
     }
 
-}
+    //** Paper */
+    else if (player === "Paper") {
+        if (computer === "Rock") {
+            alert(`${currentMatch} = You Win`);
+        } else { 
+            alert(`${currentMatch} = Computer Wins`);
+        }
+    }
 
-
-function calculateCorrectAnswer()
-
-function incrementScore()
-
-function incrementWrongAnswer()
-
-if (player == "rock") {
-    document.getElementsByClassName("player").src = "assets/images/rock.jpeg");
-
+    //** Scissors */
+    else {
+        if (computer === "Paper") {
+            alert(`${currentMatch} = You Win`);
+        } else {
+            alert(`${currentMatch} = Computer Wins`);
+        }
+    }
 }
