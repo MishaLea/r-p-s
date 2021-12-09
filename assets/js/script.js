@@ -1,3 +1,5 @@
+console.log('loaded')
+
 /**
  * Declare constants for DOM and possible choices
  */
@@ -19,28 +21,29 @@ let playerScore = 0;
 let computerScore = 0;
 
 //** not sure if this will work */
-choice.forEach((".choice") => {
+choice.forEach(("buttons") => {
 
 })
 
 
 /**Const example from google */
 
-const choice = document.querySelectorAll(".choice");
+const choice = document.querySelectorAll("buttons");
 
-    choice.forEach((choice) => {
-    
-    choice.addEventListener("click", function () {
-        
-/** variable 'input' created for click event */
-    const player = this.textContent;
+    choice.forEach(choice) => {
 
-    const computer = choice[Math.floor(Math.random() * 3)];
+            choice.addEventListener("click", function () {
 
-    compareInputs(player, computer);
-    updateScore();
-    });
-});
+                /** variable 'input' created for click event */
+                const player = this.textContent;
+                const computer = ["Rock", "Paper", "Scissors"];
+
+                const computer = choice[Math.floor(Math.random() * 3)];
+
+                compareInputs(player, computer);
+                updateScore();
+            });
+        });
 
 
 
@@ -93,6 +96,7 @@ if (checkWinner()) {
     updateScore();
 }
 
+//** Does the name in brackets = the name after the textcontent? */
 function updateScore() {
     document.getElementById("playerScore").textContent = playerScore;
     document.getElementById("computerScore").textContent = computerScore;
@@ -102,12 +106,13 @@ function checkWinner() {
     if (playerScore === 5 || computerScore === 5) {
         const winner = 
         playerScore === 5
+
         ? "Yay! You Won!"
         : "Sorry, better luck next time!";
-        alert(winner);
-        return true;
+    alert(winner);
+    return true;
     }
-    return false;
+   return false;
 }
 
 /** i attempted to add another function 

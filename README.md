@@ -6,3 +6,5 @@ The HTML and CSS code will allow for friendly/easy to use navigation with a simp
 It is intended primarily for parents with children that are developing their decision making capabilities. 
 For this purpose i intend on creating an exciting mix of foreground and background colours that will help with the games purpose. 
 The context on the page will also be very basic so not to confuse the user.  
+
+I hope to accomplish a friendly and easy to navigate website for user expereince, accessibility and responsivity.  
