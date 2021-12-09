@@ -3,7 +3,7 @@ console.log('loaded')
 //**Declare constants for DOM and possible choices */
 
 
-const buttons = document.getElementsByClassName("choice");
+const buttons = document.getElementsByClassName("btns");
 const playArea = document.getElementsByClassName("play-area");
 const player = document.getElementById("player");
 const computer = document.getElementById("computer");
@@ -12,31 +12,37 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const pScoreDisplay = document.getElementById("player-score");
 const cScoreDisplay = document.getElementById("computer-score");
-const choice = ["Rock", "Paper", "Scissors"];
 
 //**scoring system */
 
-let playerScore = 0;
-let computerScore = 0;
+
 
 /**Const example from google */
 
-const choice = document.querySelectorAll("buttons");
-
-
-choice.addEventListener("click", function () {
+    const btns = document.querySelectorAll(".btns");
+    btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+    console.log('click worked')
 
     /** variable 'input' created for click event */
     const player = this.textContent;
-    const computer = ["Rock", "Paper", "Scissors"];
+
+    const choice = ["Rock", "Paper", "Scissors"];
 
     const computer = choice[Math.floor(Math.random() * 3)];
 
     compareInputs(player, computer);
     updateScore();
+    });
 });
 
 
+
+function newFunction() {
+    const playerScore = 0;
+    const computerScore = 0;
+    return { playerScore, computerScore };
+}
 
 function compareInputs(player, computer) {
     const result = `${player} vs ${computer}`;
@@ -46,6 +52,15 @@ function compareInputs(player, computer) {
         alert(`${result} is a Tie`);
         return;
     }
+
+    const choice = document.querySelectorAll(".choice");
+    let playerScore = 0;
+    let computerScore = 0;
+
+    choice.forEach; {
+
+    };
+
     //** Rock */
     if (player === "Rock") {
         if (computer === "Scissors") {
@@ -87,10 +102,13 @@ if (checkWinner()) {
     updateScore();
 }
 
+const pScore = this.textContent;
+console.log(pScore)
 //** Does the name in brackets = the name after the textcontent? */
+
 function updateScore() {
-    document.getElementById("playerScore").textContent = playerScore;
-    document.getElementById("computerScore").textContent = computerScore;
+    document.getElementById("pScoreDisplay").textContent = pScoreDisplay;
+    document.getElementById("cScoreDisplay").textContent = cScoreDisplay;
 }
 
 function checkWinner() {

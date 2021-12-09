@@ -62,12 +62,17 @@ footer p {
     height: 80%;
 }
 
-.choice {
+.play-area {
+    margin-top: 20px;
+}
+
+.btn {
     display: inline-block;
-    margin: 4%;
+    margin: 5%;
     width: 100px;
     height: 40px;
 }
+
 
 button:hover {
     background-color:skyblue;
@@ -81,7 +86,7 @@ button:hover {
 
 #player-image {
     width: 90%;
-    margin-bottom: 40%;
+    margin-bottom: 50%;
 }
 
 .computer {
@@ -92,5 +97,5 @@ button:hover {
 
 #computer-image {
     width: 90%;
-    margin-bottom: 40%;
+    margin-bottom: 50%;
 }
