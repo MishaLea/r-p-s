@@ -1,8 +1,7 @@
 console.log('loaded')
 
-/**
- * Declare constants for DOM and possible choices
- */
+//**Declare constants for DOM and possible choices */
+
 
 const buttons = document.getElementsByClassName("choice");
 const playArea = document.getElementsByClassName("play-area");
@@ -13,24 +12,17 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
-const cChoice = ["Rock", "Paper", "Scissors"];
+const choice = ["Rock", "Paper", "Scissors"];
 
 //**scoring system */
-const options = document.querySelectorAll(".choice");
+
 let playerScore = 0;
 let computerScore = 0;
-
-//** not sure if this will work */
-choice.forEach(("buttons") => {
-
-})
-
 
 /**Const example from google */
 
 const choice = document.querySelectorAll("buttons");
 
-    choice.forEach(choice) => {
 
             choice.addEventListener("click", function () {
 
@@ -43,7 +35,7 @@ const choice = document.querySelectorAll("buttons");
                 compareInputs(player, computer);
                 updateScore();
             });
-        });
+        ;
 
 
 

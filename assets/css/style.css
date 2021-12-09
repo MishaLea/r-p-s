@@ -23,6 +23,13 @@ header {
     border-bottom: black 5px;
 }
 
+.sub-heading {
+    text-align: center;
+    height: 75px;
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+
 
 footer {
     position: absolute;
@@ -50,7 +57,7 @@ footer p {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1%;
+    margin-top: 4%;
     text-align: center;
     height: 80%;
 }
