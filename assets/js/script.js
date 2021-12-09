@@ -10,8 +10,8 @@ const computer = document.getElementById("computer");
 const result = document.getElementsByClassName("result")
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const playerScore = document.getElementById("player-score");
-const computerScore = document.getElementById("computer-score");
+const pScoreDisplay = document.getElementById("player-score");
+const cScoreDisplay = document.getElementById("computer-score");
 const choice = ["Rock", "Paper", "Scissors"];
 
 //**scoring system */
@@ -24,30 +24,29 @@ let computerScore = 0;
 const choice = document.querySelectorAll("buttons");
 
 
-            choice.addEventListener("click", function () {
+choice.addEventListener("click", function () {
 
-                /** variable 'input' created for click event */
-                const player = this.textContent;
-                const computer = ["Rock", "Paper", "Scissors"];
+    /** variable 'input' created for click event */
+    const player = this.textContent;
+    const computer = ["Rock", "Paper", "Scissors"];
 
-                const computer = choice[Math.floor(Math.random() * 3)];
+    const computer = choice[Math.floor(Math.random() * 3)];
 
-                compareInputs(player, computer);
-                updateScore();
-            });
-        ;
+    compareInputs(player, computer);
+    updateScore();
+});
 
 
 
 function compareInputs(player, computer) {
     const result = `${player} vs ${computer}`;
 
-//**Tie */
+    //**Tie */
     if (player === computer) {
         alert(`${result} is a Tie`);
         return;
     }
-//** Rock */
+    //** Rock */
     if (player === "Rock") {
         if (computer === "Scissors") {
             alert(`${result} = You Win`);
@@ -63,7 +62,7 @@ function compareInputs(player, computer) {
         if (computer === "Rock") {
             alert(`${result} = You Win`);
             playerScore++;
-        } else { 
+        } else {
             alert(`${result} = Computer Wins`);
             computerScore++;
         }
@@ -96,15 +95,15 @@ function updateScore() {
 
 function checkWinner() {
     if (playerScore === 5 || computerScore === 5) {
-        const winner = 
-        playerScore === 5
+        const winner =
+            playerScore === 5
 
-        ? "Yay! You Won!"
-        : "Sorry, better luck next time!";
-    alert(winner);
-    return true;
+            ?"Yay! You Won!" 
+            :"Sorry, better luck next time!";
+        alert(winner);
+        return true;
     }
-   return false;
+    return false;
 }
 
 /** i attempted to add another function 
