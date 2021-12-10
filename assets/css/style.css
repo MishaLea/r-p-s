@@ -99,3 +99,24 @@ i {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        word-spacing: 4px;
+        margin-bottom: 0;
+    }
+
+    .game-area > h2 {
+        font-weight: bolder;
+        margin-bottom: 3px;
+    }
+
+    img {
+        height: 25%;
+        width: 25%;
+        margin-inline: 8px;
+    }
+}
