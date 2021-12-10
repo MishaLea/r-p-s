@@ -5,11 +5,11 @@ console.log('loaded')
 
 const buttons = document.getElementsByClassName("btns");
 const playArea = document.getElementsByClassName("play-area");
-const result = document.getElementsByClassName("Scores")
+const results = document.getElementsByClassName("Scores")
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const playerScoreDisplay = document.getElementById("player-score");
-const computerScoreDisplay = document.getElementById("computer-score");
+const playerScoreDisplay = document.getElementById("player-score-display");
+const computerScoreDisplay = document.getElementById("computer-score-display");
 
 //**scoring system */
 
@@ -28,17 +28,18 @@ const computerScoreDisplay = document.getElementById("computer-score");
     
             const cOptions = ["Rock", "Paper", "Scissors"];
             const computer = cOptions[Math.floor(Math.random() * 3)];
-    
-            compareScores(player, computer);
-            updateScore();
+        btn.addEventListener("score", function () {
+
+        })
+            compareInputs(player, computer);
             if (checkWinner()) {
-                player = computer = 0;
-                updateScore();
+                playerScoreDisplay = computerScoreDisplay = 0;
+                updateResults();
         }
     });
 });
 
-function compareScores(player, computer) {
+function compareInputs(player, computer) {
     const current = `${player} vs ${computer}`;
 
     //**Tie */
@@ -51,10 +52,10 @@ function compareScores(player, computer) {
     if (player === "Rock") {
         if (computer === "Scissors") {
             alert(`${current} = You Win`);
-            playerScore++;
+            playerScoreDisplay++;
         } else {
             alert(`${current} = Computer Wins`);
-            computerScore++;
+            computerScoreDisplay++;
         }
     }
 
@@ -62,10 +63,10 @@ function compareScores(player, computer) {
     else if (player === "Paper") {
         if (computer === "Rock") {
             alert(`${current} = You Win`);
-            playerScore++;
+            playerScoreDisplay++;
         } else {
             alert(`${current} = Computer Wins`);
-            computerScore++;
+            computerScoreDisplay++;
         }
     }
 
@@ -73,19 +74,19 @@ function compareScores(player, computer) {
     else {
         if (computer === "Paper") {
             alert(`${current} = You Win`);
-            playerScore++;
+            playerScoreDisplay++;
         } else {
             alert(`${current} = Computer Wins`);
-            computerScore++;
+            computerScoreDisplay++;
         }
     }
 }
 
 //** Does the name in brackets = the name after the textcontent? */
 
-function updateScore() {
-    document.getElementById("playerScoreDiplay").textContent = pScore;
-    document.getElementById("computerScoreDisplay").textContent = cScore;
+function updateResults() {
+    document.getElementById("playerScoreDiplay").textContent = playerScoreDisplay;
+    document.getElementById("computerScoreDisplay").textContent = computerScoreDisplay;
 }
 
 function checkWinner() {
