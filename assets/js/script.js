@@ -2,14 +2,14 @@ console.log('loaded')
 
 //**Declare constants for DOM and possible choices */
 
-
+// Global variables/ 
 const buttons = document.getElementsByClassName("btns");
 const playArea = document.getElementsByClassName("play-area");
 const results = document.getElementsByClassName("Scores")
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const playerScoreDisplay = document.getElementById("player-score-display");
-const computerScoreDisplay = document.getElementById("computer-score-display");
+let playerScoreDisplay = document.getElementById("player-score-display");
+let computerScoreDisplay = document.getElementById("computer-score-display");
 
 //**scoring system */
 
@@ -18,8 +18,8 @@ const computerScoreDisplay = document.getElementById("computer-score-display");
 /**Const example from google */
 
     const btns = document.querySelectorAll(".btns");
-    let pScore = 0;
-    let cScore = 0;
+    let playerScores = 0;
+    let computerScores = 0;
 
     btns.forEach((btn) => {
 
@@ -28,9 +28,9 @@ const computerScoreDisplay = document.getElementById("computer-score-display");
     
             const cOptions = ["Rock", "Paper", "Scissors"];
             const computer = cOptions[Math.floor(Math.random() * 3)];
-        btn.addEventListener("score", function () {
+       //* btn.addEventListener("score", function () {
 
-        })
+       //** */ })//*
             compareInputs(player, computer);
             if (checkWinner()) {
                 playerScoreDisplay = computerScoreDisplay = 0;
@@ -38,6 +38,7 @@ const computerScoreDisplay = document.getElementById("computer-score-display");
         }
     });
 });
+
 
 function compareInputs(player, computer) {
     const current = `${player} vs ${computer}`;
@@ -51,41 +52,39 @@ function compareInputs(player, computer) {
     //** Rock */
     if (player === "Rock") {
         if (computer === "Scissors") {
-            alert(`${current} = You Win`);
-            playerScoreDisplay++;
+            playerScoreDisplay.innerText ++ ;
+            alert(`${current} = You Win, ${playerScoreDisplay}`);
         } else {
-            alert(`${current} = Computer Wins`);
-            computerScoreDisplay++;
+            computerScoreDisplay.innerText ++ ;
+            alert(`${current} = Computer Wins, ${computerScoreDisplay}`);
         }
     }
 
     //** Paper */
     else if (player === "Paper") {
         if (computer === "Rock") {
-            alert(`${current} = You Win`);
-            playerScoreDisplay++;
+            playerScoreDisplay.innerText ++ ;
+            alert(`${current} = You Win, ${playerScoreDisplay}`);
         } else {
-            alert(`${current} = Computer Wins`);
-            computerScoreDisplay++;
+            computerScoreDisplay.innerText ++ ;
+            alert(`${current} = Computer Wins, ${computerScoreDisplay}`);
         }
     }
 
     //** Scissors */
     else {
         if (computer === "Paper") {
-            alert(`${current} = You Win`);
-            playerScoreDisplay++;
+            playerScoreDisplay.innerText ++ ;
+            alert(`${current} = You Win, ${playerScoreDisplay}`);
         } else {
-            alert(`${current} = Computer Wins`);
-            computerScoreDisplay++;
+            computerScoreDisplay.innerText ++ ;
+            alert(`${current} = Computer Wins, ${computerScoreDisplay}`);
         }
     }
 }
 
-//** Does the name in brackets = the name after the textcontent? */
-
 function updateResults() {
-    document.getElementById("playerScoreDiplay").textContent = playerScoreDisplay;
+    document.getElementById("playerScoreDisplay").textContent = playerScoreDisplay;
     document.getElementById("computerScoreDisplay").textContent = computerScoreDisplay;
 }
 

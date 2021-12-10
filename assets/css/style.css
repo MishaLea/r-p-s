@@ -23,14 +23,6 @@ header {
     border-bottom: black 5px;
 }
 
-.sub-heading {
-    text-align: center;
-    height: 75px;
-    font-size: 20px;
-    padding-bottom: 2%;
-}
-
-
 footer {
     position: absolute;
     width: 100%;
@@ -66,18 +58,15 @@ footer p {
     margin-top: 20px;
 }
 
-.btn {
+.choice-area .btns {
     display: inline-block;
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     width: 100px;
     height: 40px;
+    font-size: medium;
+    margin-top: 10px;
 }
-
-
-button:hover {
-    background-color:skyblue;
-}
-
 .player {
     background-color: #B4A0DD;
     float: left;
@@ -98,4 +87,13 @@ button:hover {
 #computer-image {
     width: 90%;
     margin-bottom: 50%;
+}
+
+i {
+    display: inline-block;
+    font-size: 300%;
+    margin-bottom: 20%;
+    letter-spacing: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }

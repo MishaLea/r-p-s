@@ -11,10 +11,8 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- link used as in Love Maths challenge but different font -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/c44ac9f8c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Let's Rock, Paper, Scissor it!</title>
 </head>
@@ -22,7 +20,6 @@
 <body>
     <header>
         <h1 class="heading"> Let's Rock, Paper, Scissors! </h1>
-        <h2 class= "sub-heading"> Win 5 Rounds to become the Champion</h2>
     </header>
 
     <!-- This is the main game area, the class names from the 'project scope' video have been used -->
@@ -46,11 +43,13 @@
         <div class="play-area">
             <div class="player">
                 <h3 class="Scores">Your Score: <span id="player-score-display">0</span></h3>
-                <img id="player-image" src="assets/images/rps.jpg" alt="Rock Paper Scissors Image">
+                <i id="rock" class="fas fa-hand-rock"></i>
+                <i id="paper" class="fas fa-hand-paper"></i>
+                <i id="scissors" class="fas fa-hand-scissors"></i>
             </div>
             <div class="computer">
                 <h3 class="Scores">Computer Score: <span id="computer-score-display">0</span></h3>
-                <img id="computer-image" src="assets/images/rps.jpg" alt="Rock Paper Scissors Image">
+                <i id="computer-icon" class="fas fa-desktop"></i>
             </div>
 
         </div>
