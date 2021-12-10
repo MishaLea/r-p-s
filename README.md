@@ -42,8 +42,11 @@ The aim of the game is is to beat the computer against a simple Rock, Paper, Sci
 # Skeleton: 
 Balsamiq was sued when creating the wireframes for the laptop, tablet and mobile. 
 
-```md
-![alt text](assets/images/laptopp2.jpg)
-```
+*Laptopp2
+![Laptopp2](/assets/images/laptopp2.jpg)
 
+*tabletsizep2
+![tabletsizep2](/assets/images/tabletsizep2.jpg)
 
+*mobilep2
+![mobilep2](/assets/images/mobilesizep2.jpg)
