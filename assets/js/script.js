@@ -5,9 +5,7 @@ console.log('loaded')
 
 const buttons = document.getElementsByClassName("btns");
 const playArea = document.getElementsByClassName("play-area");
-const player = document.getElementById("player");
-const computer = document.getElementById("computer");
-const result = document.getElementsByClassName("result")
+const result = document.getElementsByClassName("Scores")
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const pScoreDisplay = document.getElementById("player-score");
@@ -20,54 +18,42 @@ const cScoreDisplay = document.getElementById("computer-score");
 /**Const example from google */
 
     const btns = document.querySelectorAll(".btns");
+    let pScore = 0;
+    let cScore = 0;
+
     btns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-    console.log('click worked')
 
-    /** variable 'input' created for click event */
-    const player = this.textContent;
-
-    const choice = ["Rock", "Paper", "Scissors"];
-
-    const computer = choice[Math.floor(Math.random() * 3)];
-
-    compareInputs(player, computer);
-    updateScore();
+        btn.addEventListener("click", function () {
+            const player = this.textContent;
+    
+            const cOptions = ["Rock", "Paper", "Scissors"];
+            const computer = cOptions[Math.floor(Math.random() * 3)];
+    
+            compareresults(player, computer);
+            updateScore();
+            if (checkWinner()) {
+                player = computer = 0;
+                updateScore();
+            }
     });
 });
 
-
-
-function newFunction() {
-    const playerScore = 0;
-    const computerScore = 0;
-    return { playerScore, computerScore };
-}
-
-function compareInputs(player, computer) {
-    const result = `${player} vs ${computer}`;
+function compareScores(player, computer) {
+    const current = `${player} vs ${computer}`;
 
     //**Tie */
     if (player === computer) {
-        alert(`${result} is a Tie`);
+        alert(`${current} is a Tie`);
         return;
     }
-
-    const choice = document.querySelectorAll(".choice");
-    let playerScore = 0;
-    let computerScore = 0;
-
-    choice.forEach; {
-
-    };
 
     //** Rock */
     if (player === "Rock") {
         if (computer === "Scissors") {
-            alert(`${result} = You Win`);
+            alert(`${current} = You Win`);
             playerScore++;
         } else {
-            alert(`${result} = Computer Wins`);
+            alert(`${current} = Computer Wins`);
             computerScore++;
         }
     }
@@ -75,10 +61,10 @@ function compareInputs(player, computer) {
     //** Paper */
     else if (player === "Paper") {
         if (computer === "Rock") {
-            alert(`${result} = You Win`);
+            alert(`${current} = You Win`);
             playerScore++;
         } else {
-            alert(`${result} = Computer Wins`);
+            alert(`${current} = Computer Wins`);
             computerScore++;
         }
     }
@@ -86,29 +72,20 @@ function compareInputs(player, computer) {
     //** Scissors */
     else {
         if (computer === "Paper") {
-            alert(`${result} = You Win`);
+            alert(`${current} = You Win`);
             playerScore++;
         } else {
-            alert(`${result} = Computer Wins`);
+            alert(`${current} = Computer Wins`);
             computerScore++;
         }
     }
 }
 
-compareInputs(player, computer);
-updateScore();
-if (checkWinner()) {
-    playerScore = computerScore = 0;
-    updateScore();
-}
-
-const pScore = this.textContent;
-console.log(pScore)
 //** Does the name in brackets = the name after the textcontent? */
 
-function updateScore() {
-    document.getElementById("pScoreDisplay").textContent = pScoreDisplay;
-    document.getElementById("cScoreDisplay").textContent = cScoreDisplay;
+function updateScore(playerScore, computerScore) {
+    document.getElementById("playerScore").textContent = playerScore;
+    document.getElementById("computerScore").textContent = computerScore;
 }
 
 function checkWinner() {
