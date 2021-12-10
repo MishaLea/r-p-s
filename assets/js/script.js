@@ -8,8 +8,8 @@ const playArea = document.getElementsByClassName("play-area");
 const result = document.getElementsByClassName("Scores")
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const pScoreDisplay = document.getElementById("player-score");
-const cScoreDisplay = document.getElementById("computer-score");
+const playerScoreDisplay = document.getElementById("player-score");
+const computerScoreDisplay = document.getElementById("computer-score");
 
 //**scoring system */
 
@@ -29,12 +29,12 @@ const cScoreDisplay = document.getElementById("computer-score");
             const cOptions = ["Rock", "Paper", "Scissors"];
             const computer = cOptions[Math.floor(Math.random() * 3)];
     
-            compareresults(player, computer);
+            compareScores(player, computer);
             updateScore();
             if (checkWinner()) {
                 player = computer = 0;
                 updateScore();
-            }
+        }
     });
 });
 
@@ -83,13 +83,13 @@ function compareScores(player, computer) {
 
 //** Does the name in brackets = the name after the textcontent? */
 
-function updateScore(playerScore, computerScore) {
-    document.getElementById("playerScore").textContent = playerScore;
-    document.getElementById("computerScore").textContent = computerScore;
+function updateScore() {
+    document.getElementById("playerScoreDiplay").textContent = pScore;
+    document.getElementById("computerScoreDisplay").textContent = cScore;
 }
 
 function checkWinner() {
-    if (playerScore === 5 || computerScore === 5) {
+    if (playerScoreDisplay === 5 || computerScoreDisplay === 5) {
         const winner =
             playerScore === 5
 
