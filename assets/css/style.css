@@ -26,14 +26,25 @@ header {
 footer {
     position: absolute;
     width: 100%;
+    height: 75px;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     box-sizing: border-box;
     min-height: 80px;
-    padding-top: 2px;
+    margin-top: 30px;
     text-align: center;
     color: black;
     background-color: #DDA0DD;
+}
+
+footer > h2 {
+    font-size: 35px;
+}
+
+footer > h3 {
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+    font-size: 35px;
 }
 
 footer p {
@@ -41,6 +52,9 @@ footer p {
     border-width: 5px;
     border-style: dotted;
     border-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
 }
 
 /* Game Area*/
@@ -52,57 +66,72 @@ footer p {
     text-align: center;
 }
 
+.game-area > img {
+    margin-inline: 10px;
+    padding: 10px;
+}
+
 .game-area h2 {
     margin-top: 0;
 }
 
 .play-area {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .choice-area .btns {
     display: inline-block;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 6%;
+    margin-right: 6%;
     width: 100px;
     height: 40px;
     font-size: medium;
     margin-top: 10px;
 }
+
+.Scores {
+    font-size: 50px;
+}
+
 .player {
     background-color: #B4A0DD;
     float: left;
     width: 45%;
-}
-
-#player-image {
-    width: 90%;
-    margin-bottom: 50%;
+    height: 70%;
+    margin-bottom: 10%;
 }
 
 .computer {
     background-color: #A0DDA0;
     float: right;
     width: 45%;
-}
-
-#computer-image {
-    width: 90%;
-    margin-bottom: 50%;
+    height: 70%;
+    margin-bottom: 10%;
 }
 
 i {
     display: inline-block;
-    font-size: 300%;
+    font-size: 400%;
     margin-bottom: 20%;
-    letter-spacing: 10px;
+    letter-spacing: 30px;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-/* Media Queries */
+.btns:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+    border-width: thick;
+}
+
+/* Media Queries with max screen width of 768px */
 
 @media (max-width: 768px) {
+    html {
+        min-height: 85%;
+    }
+    
     header {
         font-size: 20px;
         word-spacing: 4px;
@@ -114,9 +143,160 @@ i {
         margin-bottom: 3px;
     }
 
-    img {
+    .game-area img {
         height: 25%;
         width: 25%;
-        margin-inline: 8px;
+        margin-inline: 5px;
+        padding: 8px;
+        margin-top: 8%;
+    }
+
+    .player {
+        background-color: #B4A0DD;
+        float: left;
+        width: 45%;
+        height: 70%;
+        margin-bottom: 5%;
+        margin-top: 8%;
+    }
+
+    .Scores {
+        font-size: 20px;
+    }
+    
+    
+    .computer {
+        background-color: #A0DDA0;
+        float: right;
+        width: 45%;
+        height: 70%;
+        margin-bottom: 5%;
+        margin-top: 8%;
+    }
+
+    i {
+        display: inline-block;
+        font-size: 200%;
+        margin-bottom: 20%;
+        letter-spacing: 30px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    footer > h2 {
+        font-size: 35px;
+    }
+    
+    footer > h3 {
+        margin-bottom: 5%;
+        padding-bottom: 1%;
+        font-size: 35px;
+    }
+    
+    footer p {
+        border-width: 5px;
+        border-style: dotted;
+        border-color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    footer {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+}
+
+/* Media Queries with max screen width of 368px */
+
+@media (max-width: 360px) {
+    html {
+        height: 20%;
+        min-height: 80%;
+    }
+
+    header {
+        font-size: 12px;
+        word-spacing: 2px;
+        height: 40px;
+    }
+
+    .game-area > h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        height: 40px;
+    }
+
+    .game-area > img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .choice-area > .btns {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-inline: 5px;
+        width: 25%;
+        margin-bottom: 10%;
+    }
+
+    .btns:hover {
+        background-color: lightblue;
+        border-color: darkblue;
+        border-width: thick;
+    }
+
+    .Scores {
+        font-size: 12px;
+    }
+
+    .play-area {
+        margin-top: 1px;
+        margin-bottom: 0;
+    }
+
+    .player {
+        background-color: #B4A0DD;
+        float: left;
+        width: 45%;
+        height: 40%;
+        margin-bottom: 1%;
+    }
+    
+    .computer {
+        background-color: #A0DDA0;
+        float: right;
+        width: 45%;
+        height: 40%;
+        margin-bottom: 1%;
+    }
+
+    i {
+        font-size: 120%;
+        letter-spacing: 5px;
+    }
+
+    .play-area {
+        margin-bottom: 10px;
+    }
+
+    footer > h2 > h3 {
+        font-size: 20%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer > p {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    footer {
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
     }
 }
