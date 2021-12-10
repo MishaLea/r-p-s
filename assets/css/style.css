@@ -17,10 +17,10 @@ body {
 
 header {
     text-align: center;
-    height: 75px;
+    height: 70px;
     font-size: 25px;
-    /*Trying to create a solid bottom border underneath the heading */
-    border-bottom: black 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 footer {
@@ -49,9 +49,11 @@ footer p {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
     text-align: center;
-    height: 80%;
+}
+
+.game-area h2 {
+    margin-top: 0;
 }
 
 .play-area {
