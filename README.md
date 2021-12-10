@@ -49,4 +49,4 @@ Balsamiq was sued when creating the wireframes for the laptop, tablet and mobile
 ![tabletsizep2](/assets/images/tabletsizep2.jpg)
 
 *mobilep2
-![mobilep2](/assets/images/mobilesizep2.jpg)
+![mobilep2](/assets/images/mobilep2.jpg)
