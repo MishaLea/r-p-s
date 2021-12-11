@@ -1,4 +1,4 @@
-# Let's Rock, Pape, Scissors!
+# Let's Rock, Pape, Scissors! (https://8000-tan-impala-mpfkiaxi.ws-eu23.gitpod.io/)
 
 Introduction: 
 This is a fun, basic website which provides a game of rock, paper, scissors. 
@@ -50,3 +50,42 @@ Balsamiq was sued when creating the wireframes for the laptop, tablet and mobile
 
 *mobilep2
 ![mobilep2](/assets/images/mobilep2.jpg)
+
+
+And once those minor errors were fixed, it came back with the following. 
+
+ 
+The CSS validator came back with no warnings or errors, as well. However the Javascript validator advised that 
+'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). Should be included in the JavaScript code in order for it to work in the JSHint Validator. 
+Once that was included in the code, there were just a few errors (again, minor and avoidable) IE. Semi colon missing, 
+
+However once those were fixed, I was happy to see all three sections of the code (HTML, CSS, JavaSCript) came back with just 1 or 2 warnings. No Errors were found. 
+
+# The Lighthouse Test: 
+I tried this out before I had even finished coding the website and was surprised to see it had a 100% accessibility and between 92% - 100% for the other elements. 
+
+*lighthouse
+![lighthouse](/assets/images/lighthouse.jpg)
+
+# Fixed Errors: 
+The result pop up screen was not working for me at all at the beginning and never returned a result without  the console showing errors throughout the code. Once i clarified certain issues with Gbenga (Mentor) that allowed me to see how to increment the scores sufficiently without causing any further errors as well as fixing the previous errors showing in the Javascrip console.
+  
+*IncrementScoreMethod+values
+![IncrementScoreMethod+values](/assets/images/IncrementScoreMethod+values)
+
+Instead of the ‘++’ operator, I had a ‘+=’ operator which is for Python rather than JavaScript.     
+
+Aside from the errors in Java, I have had difficulty with the structure of the website when adding in @mediaquries. 
+I believe it’s due to descendants as not all the classes are amended for the other screen sizes. My next plan is to try the ‘AM I Responsive’ link. 
+
+# Credits: 
+
+- Rock, Paper, Scissor Image = https://clipart.me/free-vector/rock-paper-scissors
+- Codeinstitute - Videos and lessons
+- FontAwesome - https://fontawesome.com/
+- google.
+
+Deployment - 
+
+Through Github Diployment 'Page'
+
